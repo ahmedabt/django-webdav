@@ -1,3 +1,5 @@
+# Portions (c) 2019, Ahmed Eltawela <ahmedabt@gmail.com>
+# All rights reserved.
 # Portions (c) 2014, Alexander Klimenko <alex@erix.ru>
 # All rights reserved.
 #
@@ -43,7 +45,7 @@ class CollectionModel(BaseDavModel):
 class ObjectModel(BaseDavModel):
     parent = models.ForeignKey(CollectionModel, blank=True, null=True)
     size = models.IntegerField(default=0)
-    content = models.TextField(default=u"")
+    content = models.TextField(default="")
     md5 = models.CharField(max_length=255)
 
     class Meta:

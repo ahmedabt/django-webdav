@@ -1,3 +1,5 @@
+# Portions (c) 2019, Ahmed Eltawela <ahmedabt@gmail.com>
+# All rights reserved.
 # Portions (c) 2014, Alexander Klimenko <alex@erix.ru>
 # All rights reserved.
 #
@@ -25,6 +27,7 @@ from django.utils.functional import cached_property
 from django.utils.timezone import now
 from djangodav.base.resources import BaseDavResource
 from djangodav.utils import url_join
+from functools import reduce
 
 
 class BaseDBDavResource(BaseDavResource):

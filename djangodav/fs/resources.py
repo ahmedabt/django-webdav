@@ -1,3 +1,5 @@
+# Portions (c) 2019, Ahmed Eltawela <ahmedabt@gmail.com>
+# All rights reserved.
 # Portions (c) 2014, Alexander Klimenko <alex@erix.ru>
 # All rights reserved.
 #
@@ -24,7 +26,7 @@ from sys import getfilesystemencoding
 import os
 import datetime
 import shutil
-import urllib
+import urllib.request, urllib.parse, urllib.error
 
 from django.http import HttpResponse
 from django.utils.http import http_date
@@ -81,12 +83,6 @@ class BaseFSDavResource(BaseDavResource):
     def get_children(self):
         """Return an iterator of all direct children of this resource."""
         for child in os.listdir(self.get_abs_path()):
-            try:
-                is_unicode = isinstance(child, unicode)
-            except NameError:  # Python 3 fix
-                is_unicode = isinstance(child, str)
-            if not is_unicode:
-                child = child.decode(fs_encoding)
             yield self.clone(url_join(*(self.path + [child])))
 
     def write(self, content):
@@ -138,7 +134,7 @@ class SendFileFSDavResource(BaseFSDavResource):
         response = HttpResponse()
         full_path = self.get_abs_path().encode('utf-8')
         if self.quote:
-            full_path = urllib.quote(full_path)
+            full_path = urllib.parse.quote(full_path)
         response['X-SendFile'] = full_path
         response['Content-Type'] = mimetypes.guess_type(self.displayname)
         response['Content-Length'] = self.getcontentlength

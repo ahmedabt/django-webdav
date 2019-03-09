@@ -1,3 +1,5 @@
+# Portions (c) 2019, Ahmed Eltawela <ahmedabt@gmail.com>
+# All rights reserved.
 # Portions (c) 2014, Alexander Klimenko <alex@erix.ru>
 # All rights reserved.
 #
@@ -30,14 +32,14 @@ DEFAULT_SETTINGS = dict(
         'djangodav',
         'django.contrib.auth',
         'django.contrib.contenttypes',
-        # 'djangodav.tests',
+        #'djangodav.tests',
     ),
     DATABASES = dict(
         default = dict(
             ENGINE = 'django.db.backends.sqlite3'
         )
     ),
-    ROOT_URLCONF = 'djangodav.tests.urls',
+    #ROOT_URLCONF = 'djangodav.tests.urls',
     MIDDLEWARE_CLASSES = ()
 )
 

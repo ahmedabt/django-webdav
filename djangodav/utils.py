@@ -1,3 +1,5 @@
+# Portions (c) 2019, Ahmed Eltawela <ahmedabt@gmail.com>
+# All rights reserved.
 # Portions (c) 2014, Alexander Klimenko <alex@erix.ru>
 # All rights reserved.
 #
@@ -61,7 +63,7 @@ def get_property_tag(res, name):
         return D(name)
     try:
         if hasattr(res, name):
-            return D(name, unicode(getattr(res, name)))
+            return D(name, str(getattr(res, name)))
     except AttributeError:
         return
 
