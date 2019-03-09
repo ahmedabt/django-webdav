@@ -1,7 +1,7 @@
 DjangoDav
 =========
 
-Production ready WebDav extension for Django.
+Production ready WebDav extension for Django V2 and compatible with Python 3+ 
 
 .. image:: https://travis-ci.org/meteozond/djangodav.svg
 
