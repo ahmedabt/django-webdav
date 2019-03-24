@@ -1,3 +1,6 @@
+# Portions (c) 2019, Ahmed Eltawela <ahmedabt@gmail.com>
+# All rights reserved.
+#
 # Portions (c) 2014, Alexander Klimenko <alex@erix.ru>
 # All rights reserved.
 #
@@ -19,5 +22,5 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with DjangoDav.  If not, see <http://www.gnu.org/licenses/>.
 
-VERSION = (0, 0, 1, 'beta', 23)
-__version__ = "0.0.1b23"
+VERSION = (0, 1)
+__version__ = "0.1"

@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 #
+# Portions (c) 2019, Ahmed Eltawela <ahmedabt@gmail.com>
+# All rights reserved.
+#
 # Portions (c) 2014, Alexander Klimenko <alex@erix.ru>
 # All rights reserved.
 #
@@ -23,15 +26,14 @@
 
 from setuptools import setup, find_packages
 
-
 setup(
-    name='DjangoDav',
+    name='django-webdav',
     version=__import__('djangodav').__version__,
-    description=('A WebDAV server for Django.'),
-    long_description = open('README.rst').read(),
-    author='Alexander Klimenko',
-    author_email='alex@erix.ru',
-    url='https://github.com/meteozond/djangodav',
+    description='A WebDAV server for Django V2 and Python 3+',
+    long_description=open('README.rst').read(),
+    author='Ahmed Eltawela',
+    author_email='ahmedabt@gmail.com',
+    url='https://github.com/ahmedabt/django-webdav',
     packages=find_packages(),
     classifiers=[
         'Development Status :: 4 - Beta',
@@ -39,14 +41,11 @@ setup(
         'Framework :: Django',
         'License :: OSI Approved :: GNU Affero General Public License v3',
         'Operating System :: OS Independent',
-        'Programming Language :: Python',
-        "Programming Language :: Python :: 2.7",
-        "Programming Language :: Python :: 2.6",
-        "Programming Language :: Python :: 3.4",
+        "Programming Language :: Python :: 3+",
         'Topic :: Software Development :: Libraries :: Python Modules'
     ],
-    install_requires=["lxml", "Django>=1.3.0"],
-    tests_require=["Django>=1.3.0", "mock==1.0.1"],
+    install_requires=["lxml", "Django>=2"],
+    tests_require=["Django>=2", "mock==1.0.1"],
     include_package_data=True,
     zip_safe=False,
     test_suite='runtests.runtests'
