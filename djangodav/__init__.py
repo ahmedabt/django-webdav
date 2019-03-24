@@ -22,5 +22,5 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with DjangoDav.  If not, see <http://www.gnu.org/licenses/>.
 
-VERSION = (0, 1)
-__version__ = "0.1"
+VERSION = (0, 1, 0,'rc', 2)
+__version__ = "0.1rc2"
