@@ -3,8 +3,9 @@ DjangoDav
 
 Production ready WebDav extension based on djangodav for Django V2 and compatible with Python 3+ 
 
-.. image:: https://travis-ci.org/meteozond/djangodav.svg
-
+.. image:: https://travis-ci.com/ahmedabt/django-webdav.svg?branch=master
+    :target: https://travis-ci.com/ahmedabt/django-webdav
+    
 Motivation
 ----------
 
